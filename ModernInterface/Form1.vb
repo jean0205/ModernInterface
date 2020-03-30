@@ -61,6 +61,11 @@ Public Class Form1
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         showSubMenu(Panel1, IconButton1)
         ActivateButton(sender, RGBColors.color1)
+        OpenChildForm(Form2)
+
+    End Sub
+
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
 
     End Sub
 
@@ -117,6 +122,24 @@ Public Class Form1
             currentBtn.ImageAlign = ContentAlignment.MiddleLeft
             currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText
         End If
+    End Sub
+
+
+    Private Sub OpenChildForm(childForm As Form)
+        'Open only form'
+        If currentChildForm IsNot Nothing Then
+            currentChildForm.Close()
+        End If
+        currentChildForm = childForm
+        'end'
+        childForm.TopLevel = False
+        childForm.FormBorderStyle = FormBorderStyle.None
+        childForm.Dock = DockStyle.Fill
+        PanelDesktop.Controls.Add(childForm)
+        PanelDesktop.Tag = childForm
+        childForm.BringToFront()
+        childForm.Show()
+        Lbltitle.Text = childForm.Text
     End Sub
 
 
