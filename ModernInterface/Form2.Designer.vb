@@ -27,11 +27,11 @@ Partial Class Form2
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +52,7 @@ Partial Class Form2
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(59, Byte), Integer))
         Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Chart1)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -66,6 +66,16 @@ Partial Class Form2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'Button3
+        '
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.Location = New System.Drawing.Point(954, 137)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 5
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Chart1
         '
         Me.Chart1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
@@ -77,9 +87,17 @@ Partial Class Form2
         Me.Chart1.BorderlineWidth = 0
         Me.Chart1.BorderSkin.BackColor = System.Drawing.Color.Transparent
         ChartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount
+        ChartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Gainsboro
+        ChartArea1.AxisX.LineColor = System.Drawing.Color.Gainsboro
+        ChartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Gainsboro
+        ChartArea1.AxisX.TitleForeColor = System.Drawing.Color.Gainsboro
+        ChartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Gainsboro
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.Gainsboro
+        ChartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gainsboro
         ChartArea1.BackColor = System.Drawing.Color.Transparent
         ChartArea1.BackImageTransparentColor = System.Drawing.Color.Transparent
         ChartArea1.BackSecondaryColor = System.Drawing.Color.Transparent
+        ChartArea1.BorderColor = System.Drawing.Color.Gainsboro
         ChartArea1.Name = "ChartArea1"
         Me.Chart1.ChartAreas.Add(ChartArea1)
         Me.Chart1.Location = New System.Drawing.Point(6, 409)
@@ -88,7 +106,9 @@ Partial Class Form2
         Series1.ChartArea = "ChartArea1"
         Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeBar
         Series1.Color = System.Drawing.Color.MediumSeaGreen
+        Series1.LabelForeColor = System.Drawing.Color.Gainsboro
         Series1.Name = "Series1"
+        Series1.SmartLabelStyle.CalloutLineColor = System.Drawing.Color.Gainsboro
         Series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[String]
         Series1.YValuesPerPoint = 2
         Series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.[Date]
@@ -128,16 +148,6 @@ Partial Class Form2
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(332, 233)
         Me.DataGridView1.TabIndex = 1
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(954, 137)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 5
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Form2
         '
